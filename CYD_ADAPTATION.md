@@ -14,8 +14,8 @@ Keep the existing 8-ohm speaker on the board's SPEAK socket. Do NOT wire speaker
 The branch-local file `yoRadio/myoptions.h` does not contain Wi-Fi passwords. Use yoRadio's local captive portal to configure network after first flash. Weather city/time zone are configured via yoRadio web settings. Playlists can contain stations from many countries via its web UI.
 
 ## Next engineering tasks
-1. Inspect internal DAC implementation and isolate GPIO26 audio channel, with touch SPI unaffected.
-2. Add a dedicated XPT2046 bus (SCK25, MOSI32, MISO39, CS33) and coordinate mapping for rotation.
+1. Compile this profile using an Arduino ESP32 core compatible with the bundled internal DAC implementation (the original code warns about core 2.0.0-RC2).
+2. Check touchscreen coordinates and calibrate XPT2046 raw ranges.
 3. Verify 320x240 display rendering on this exact USB-C revision.
 4. Compile firmware plus web assets using a compatible Arduino ESP32 core version and flash over USB-C.
 5. Confirm streamed MP3 audio, touch, weather, and Wi-Fi on hardware.
