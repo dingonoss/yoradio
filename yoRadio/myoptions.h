@@ -16,5 +16,11 @@
 #define PLAYER_FORCE_MONO true
 // CAUTION: GPIO25 is shared with CYD touch SPI. Disable touch until a
 // GPIO26-only internal DAC implementation has been verified.
-#define TS_MODEL TS_MODEL_UNDEFINED
+#define TS_MODEL TS_MODEL_XPT2046
+#define TS_CS 33
+#define TS_SPIPINS 25,39,32,33
+#define TS_X_MIN 200
+#define TS_X_MAX 3800
+#define TS_Y_MIN 200
+#define TS_Y_MAX 3800
 #endif
