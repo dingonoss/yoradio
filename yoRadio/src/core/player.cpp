@@ -31,7 +31,7 @@ QueueHandle_t playerQueue;
   #if !I2S_INTERNAL
     Player::Player() {}
   #else
-    Player::Player(): Audio(true, I2S_DAC_CHANNEL_BOTH_EN)  {}
+    Player::Player(): Audio(true, I2S_DAC_CHANNEL_LEFT_EN)  {} // CYD: GPIO26 speaker only; keep GPIO25 free for touch SPI
   #endif
 #endif
 
