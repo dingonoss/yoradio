@@ -25,7 +25,7 @@
 
 #if TS_MODEL==TS_MODEL_XPT2046
   #ifdef TS_SPIPINS
-    SPIClass  TSSPI(HSPI);
+    SPIClass  TSSPI(VSPI); // CYD: independent VSPI touch bus; display uses HSPI
   #endif
   #include <XPT2046_Touchscreen.h>
   XPT2046_Touchscreen ts(TS_CS);
